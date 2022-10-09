@@ -76,12 +76,12 @@ test('getDataType', function () {
         make: 'Ford',
         model: 'Mustang',
         year: 1969,
-        needsMaitenance: false
+        needsMaintenance: false
     };
     expect(getDataType(car, 'make')).toBe('string');
     expect(getDataType(car, 'model')).toBe('string');
     expect(getDataType(car, 'year')).toBe('number');
-    expect(getDataType(car, 'needsMaitenance')).toBe('boolean');
+    expect(getDataType(car, 'needsMaintenance')).toBe('boolean');
 });
 
 test('addTodo', function () {
