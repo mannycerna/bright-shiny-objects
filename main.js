@@ -101,11 +101,30 @@ needsMaintenance: true
 };
 console.log(fixCar(car));
 
+/*
+function addGrades
+parameters: student (object) and newGrades array
 
+student = {
+    name: string
+    email: string
+    grades: array numbers
 
+    return student object
+}
+
+grades parameter - array of numbers
+*/
 function addGrades(student, newGrades){
     
-    student.grades = student.grades.concat(newGrades);
+    //use concat solution
+    // student.grades = student.grades.concat(newGrades);
+
+    //alt solution using for loop
+
+    for(let i = 0; i < newGrades.length; i++){
+        student.grades.push(newGrades[i]);
+    }
 
    return student;
 }
@@ -163,9 +182,9 @@ let newTodo = {
 
 console.log(addTodo(todos, newTodo));
 
-function addSong(playlist, songs){
-      songs =  playlist.songs.push(newSong);
-      playlist['duration'] = (playlist['duration']+= newSong['duration']);
+function addSong(playlist, newSong){
+      playlist.songs.push(newSong);
+      playlist['duration'] = (playlist['duration']+  newSong['duration']);
     return playlist;
 
 };
@@ -226,8 +245,8 @@ let reportCard = {
     averageGrade: 82,
     grades: [70, 96, 80]
 };
-// console.log(updateReportCard(reportCard, 62));
-console.log(updateReportCard(reportCard, 100));
+console.log(updateReportCard(reportCard, 62));
+// console.log(updateReportCard(reportCard, 100));
 
 
 // ┌─────────────────────────────────────────────────────────────────────────┐
